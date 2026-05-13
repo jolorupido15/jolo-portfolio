@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: var(--font-syne);
+  --font-mono: var(--font-dm-mono);
+  
+  --color-accent: #c8f463;
+  --color-background: #0a0a0a;
+  --color-foreground: #e8e8e8;
+  
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    cursor: none;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8f463;
+  border-radius: 3px;
+}
