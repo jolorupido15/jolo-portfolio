@@ -27,7 +27,7 @@ const About = () => {
               alt="Jolo Profile"
               width={400}
               height={400}
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-cover object-top transition-all duration-500"
             />
           </div>
           <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/10 rounded-full blur-xl" />
