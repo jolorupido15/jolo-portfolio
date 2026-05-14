@@ -1,8 +1,8 @@
 'use client';
 
+import { Send, Mail, ExternalLink, Code, Globe } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Send, Mail, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
   const [status, setStatus] = useState('idle');
@@ -27,8 +27,8 @@ const Contact = () => {
   };
 
   const socials = [
-    { icon: <ExternalLink size={20} />, href: 'https://github.com/jolorupido15', label: 'GitHub' },
-    { icon: <ExternalLink size={20} />, href: 'https://www.facebook.com/angelo.rupido', label: 'LinkedIn' },
+    { icon: <Code size={20} />, href: 'https://github.com/jolorupido15', label: 'GitHub' },
+    { icon: <Globe size={20} />, href: 'https://www.facebook.com/angelo.rupido', label: 'Facebook' },
     { icon: <Mail size={20} />, href: 'mailto:jolo15rupido@gmail.com', label: 'Email' },
   ];
 
@@ -136,6 +136,8 @@ const Contact = () => {
             key={social.label}
             href={social.href}
             aria-label={social.label}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-accent hover:border-accent/30 transition-all duration-180 hover:scale-110"
           >
             {social.icon}
