@@ -16,7 +16,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jolo — Full-Stack Developer",
+  title: "Jolo — Frontend Developer",
   description: "Personal portfolio of Jolo",
 };
 
