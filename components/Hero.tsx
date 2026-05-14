@@ -6,7 +6,7 @@ import { Rocket, Send } from 'lucide-react';
 
 const Hero = () => {
   const [text, setText] = useState('');
-  const roles = ['Frontend Developer', 'UI/UX Designer', 'Creative Coder', 'Problem Solver'];
+  const roles = ['Building Website', 'Animations'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed, setSpeed] = useState(100);
