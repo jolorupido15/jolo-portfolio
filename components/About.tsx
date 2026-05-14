@@ -6,14 +6,13 @@ import { MapPin } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    'React', 'Next.js', 'Node.js', 'TypeScript', 'Python',
-    'PostgreSQL', 'Tailwind CSS', 'Figma', 'Docker', 'AWS'
+    'HTML', 'Tailwind CSS', 'React', 'JavaScript', 'Figma'
   ];
 
   const stats = [
-    { num: '30+', label: 'Projects Completed' },
-    { num: '20+', label: 'Happy Clients' },
-    { num: '3+', label: 'Years Experience' },
+    { num: '6+', label: 'Projects Built' },
+    { num: '100+', label: 'Hours of Coding' },
+    { num: '5+', label: 'Technologies Learned' },
   ];
 
   return (
@@ -45,10 +44,7 @@ const About = () => {
 
           <div className="space-y-4 text-white/60 leading-relaxed mb-8 text-sm md:text-base">
             <p>
-              I am <strong className="text-white font-semibold">Jolo</strong>, a passionate full-stack developer and UI/UX designer based in the <span className="inline-flex items-center gap-1 text-white font-medium">Philippines <MapPin size={14} className="text-accent" /></span>. I love building products that are not just functional — but <strong className="text-white font-semibold">visually extraordinary</strong>.
-            </p>
-            <p>
-              With over <strong className="text-white font-semibold">3 years of experience</strong>, I've worked on everything from sleek landing pages to complex SaaS platforms. My philosophy: every pixel matters, every interaction should feel intentional.
+              I am <strong className="text-white font-semibold">Jolo</strong>, a passionate Frontend Developer based in the <span className="inline-flex items-center gap-1 text-white font-medium">Philippines <MapPin size={14} className="text-accent" /></span>. I love building clean and visually appealing web interfaces.
             </p>
           </div>
 
