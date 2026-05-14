@@ -27,8 +27,8 @@ const Contact = () => {
   };
 
   const socials = [
-    { icon: <ExternalLink size={20} />, href: '#', label: 'GitHub' },
-    { icon: <ExternalLink size={20} />, href: '#', label: 'LinkedIn' },
+    { icon: <ExternalLink size={20} />, href: 'https://github.com/jolorupido15', label: 'GitHub' },
+    { icon: <ExternalLink size={20} />, href: 'https://www.facebook.com/angelo.rupido', label: 'LinkedIn' },
     { icon: <Mail size={20} />, href: 'mailto:jolo15rupido@gmail.com', label: 'Email' },
   ];
 
