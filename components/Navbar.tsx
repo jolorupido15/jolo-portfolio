@@ -40,7 +40,7 @@ const Navbar = () => {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-white/70 hover:text-accent transition-colors"
+                className="text-sm font-medium text-white/70 hover:text-accent transition-all duration-180 hover:scale-[1.01]"
               >
                 {link.name}
               </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-lg font-medium text-white/70 hover:text-accent transition-colors"
+                  className="text-lg font-medium text-white/70 hover:text-accent transition-all duration-180 hover:scale-[1.01]"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

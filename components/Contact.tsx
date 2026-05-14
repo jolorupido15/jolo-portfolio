@@ -62,7 +62,7 @@ const Contact = () => {
                 type="text"
                 required
                 placeholder="John Doe"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-colors"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180"
               />
             </div>
             <div className="space-y-2">
@@ -75,7 +75,7 @@ const Contact = () => {
                 type="email"
                 required
                 placeholder="john@example.com"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-colors"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ const Contact = () => {
               name="subject"
               type="text"
               placeholder="Project Inquiry"
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-colors"
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180"
             />
           </div>
 
@@ -103,14 +103,14 @@ const Contact = () => {
               required
               rows={5}
               placeholder="Tell me about your project..."
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-colors resize-none"
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180 resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="w-full flex items-center justify-center gap-2 bg-accent text-[#0a0a0a] px-8 py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50"
+            className="w-full flex items-center justify-center gap-2 bg-accent text-[#0a0a0a] px-8 py-4 rounded-lg font-bold hover:scale-[1.01] active:scale-[0.98] transition-all duration-180 disabled:opacity-50"
           >
             {status === 'sending' ? 'Sending...' : (
               <><Send size={18} /> Send Message ✦</>
@@ -136,7 +136,7 @@ const Contact = () => {
             key={social.label}
             href={social.href}
             aria-label={social.label}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-accent hover:border-accent/30 transition-all"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-accent hover:border-accent/30 transition-all duration-180 hover:scale-110"
           >
             {social.icon}
           </a>

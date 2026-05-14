@@ -1,49 +1,49 @@
 'use client';
 
-import { ExternalLink, Code } from 'lucide-react';
+import { ExternalLink, Code, ShoppingBag, MessageSquare, BarChart3, Music, Leaf, Globe } from 'lucide-react';
 
 const projects = [
   {
     title: 'NexShop — E-Commerce Platform',
     desc: 'A full-stack e-commerce solution with real-time inventory, Stripe payments, and a slick admin dashboard.',
     tags: ['React', 'Node.js', 'MongoDB'],
-    icon: '🛒',
-    color: 'from-blue-500/20 to-cyan-500/20',
+    icon: <ShoppingBag size={48} />,
+    color: 'bg-accent/5',
   },
   {
     title: 'AuraAI — Chat Assistant',
     desc: 'An intelligent AI chat assistant with context memory, document parsing, and multi-model support.',
     tags: ['Python', 'FastAPI', 'OpenAI'],
-    icon: '🤖',
-    color: 'from-purple-500/20 to-pink-500/20',
+    icon: <MessageSquare size={48} />,
+    color: 'bg-accent/5',
   },
   {
     title: 'FlowBoard — SaaS Dashboard',
     desc: 'A powerful analytics dashboard for startups. Real-time charts, team collaboration, and automated reports.',
     tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
-    icon: '📊',
-    color: 'from-emerald-500/20 to-teal-500/20',
+    icon: <BarChart3 size={48} />,
+    color: 'bg-accent/5',
   },
   {
     title: 'Wavify — Music Streaming App',
     desc: 'A cross-platform music streaming app with offline mode, social playlists, and AI-powered recommendations.',
     tags: ['React Native', 'Expo', 'Firebase'],
-    icon: '🎵',
-    color: 'from-orange-500/20 to-red-500/20',
+    icon: <Music size={48} />,
+    color: 'bg-accent/5',
   },
   {
     title: 'GreenTrack — Eco Footprint Tracker',
     desc: 'A sustainability platform that gamifies eco-friendly habits. Users track their carbon footprint.',
     tags: ['Vue.js', 'Laravel', 'MySQL'],
-    icon: '🌿',
-    color: 'from-green-500/20 to-emerald-500/20',
+    icon: <Leaf size={48} />,
+    color: 'bg-accent/5',
   },
   {
     title: 'Roamly — Smart Travel Planner',
     desc: 'An AI-powered travel planner that generates personalized itineraries and visualizes your journey.',
     tags: ['React', 'GraphQL', 'Mapbox'],
-    icon: '✈️',
-    color: 'from-yellow-500/20 to-amber-500/20',
+    icon: <Globe size={48} />,
+    color: 'bg-accent/5',
   },
 ];
 
@@ -66,21 +66,23 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-500 hover:-translate-y-2"
+              className="group relative bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-180 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5"
             >
-              <div className={`h-48 flex items-center justify-center text-6xl bg-gradient-to-br ${project.color} group-hover:scale-105 transition-transform duration-700`}>
-                <span className="drop-shadow-2xl">{project.icon}</span>
+              <div className={`h-48 flex items-center justify-center text-accent/50 ${project.color} group-hover:bg-accent/10 transition-colors duration-500`}>
+                <div className="group-hover:scale-110 transition-transform duration-500">
+                  {project.icon}
+                </div>
               </div>
 
               <div className="p-8">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider text-white/40">
+                    <span key={tag} className="px-2 py-1 rounded bg-white/5 text-[10px] font-bold uppercase tracking-wider text-white/40">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors duration-180">
                   {project.title}
                 </h3>
                 <p className="text-sm text-white/50 leading-relaxed mb-6">
@@ -88,11 +90,11 @@ const Projects = () => {
                 </p>
 
                 <div className="flex gap-4">
-                  <a href="#" className="flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-widest hover:opacity-70 transition-opacity">
+                  <a href="#" className="flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-widest hover:opacity-70 transition-all duration-180 hover:scale-[1.01]">
                     <ExternalLink size={14} />
                     Live Demo
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-xs font-bold text-white/30 uppercase tracking-widest hover:text-white transition-colors">
+                  <a href="#" className="flex items-center gap-2 text-xs font-bold text-white/30 uppercase tracking-widest hover:text-white transition-all duration-180 hover:scale-[1.01]">
                     <Code size={14} />
                     Source
                   </a>

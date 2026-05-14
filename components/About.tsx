@@ -1,5 +1,8 @@
 'use client';
 
+import { MapPin } from 'lucide-react';
+
+
 const About = () => {
   const skills = [
     'React', 'Next.js', 'Node.js', 'TypeScript', 'Python',
@@ -17,12 +20,12 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="relative group">
           <div className="absolute -inset-4 bg-accent/20 rounded-[2rem] blur-2xl group-hover:bg-accent/30 transition-colors duration-500" />
-          <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 bg-zinc-900">
+          <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 transition-all duration-180 hover:border-accent/30 hover:shadow-lg">
             {/* Placeholder for profile image since I can't confirm exact path in public/ */}
             <img
               src="/profile.png"
               alt="Jolo Profile"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jolo';
               }}
@@ -43,7 +46,7 @@ const About = () => {
 
           <div className="space-y-4 text-white/60 leading-relaxed mb-8 text-sm md:text-base">
             <p>
-              I am<strong className="text-white font-semibold">Jolo</strong>, a passionate full-stack developer and UI/UX designer based in the Philippines 🇵🇭. I love building products that are not just functional — but <strong className="text-white font-semibold">visually extraordinary</strong>.
+              I am <strong className="text-white font-semibold">Jolo</strong>, a passionate full-stack developer and UI/UX designer based in the <span className="inline-flex items-center gap-1 text-white font-medium">Philippines <MapPin size={14} className="text-accent" /></span>. I love building products that are not just functional — but <strong className="text-white font-semibold">visually extraordinary</strong>.
             </p>
             <p>
               With over <strong className="text-white font-semibold">3 years of experience</strong>, I've worked on everything from sleek landing pages to complex SaaS platforms. My philosophy: every pixel matters, every interaction should feel intentional.
@@ -54,7 +57,7 @@ const About = () => {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-2 rounded-full border border-white/5 bg-white/5 text-white/70 text-xs font-medium hover:border-accent/30 hover:text-accent transition-all cursor-default"
+                className="px-4 py-2 rounded-lg border border-white/5 bg-white/5 text-white/70 text-xs font-medium hover:border-accent/30 hover:text-accent transition-all duration-180 hover:scale-[1.01] cursor-default"
               >
                 {skill}
               </span>
