@@ -49,7 +49,7 @@ const Hero = () => {
         </h1>
 
         <div className="text-xl md:text-2xl text-white/60 mb-10 h-16 md:h-8">
-          I craft <span className="text-white font-medium">{text}</span>
+          I like <span className="text-white font-medium">{text}</span>
           <span className="w-1 h-6 bg-accent ml-1 inline-block animate-pulse" />
           <br className="hidden md:block" />
           <span className="text-sm md:text-base mt-2 block">
