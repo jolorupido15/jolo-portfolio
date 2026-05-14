@@ -23,7 +23,7 @@ const About = () => {
           <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 transition-all duration-180 hover:border-accent/30 hover:shadow-lg">
             {/* Placeholder for profile image since I can't confirm exact path in public/ */}
             <img
-              src="/profile.png"
+              src="/profile.jpg"
               alt="Jolo Profile"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               onError={(e) => {
