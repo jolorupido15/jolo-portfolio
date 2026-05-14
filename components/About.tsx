@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 
 
@@ -21,14 +22,12 @@ const About = () => {
         <div className="relative group">
           <div className="absolute -inset-4 bg-accent/20 rounded-[2rem] blur-2xl group-hover:bg-accent/30 transition-colors duration-500" />
           <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 transition-all duration-180 hover:border-accent/30 hover:shadow-lg">
-            {/* Placeholder for profile image since I can't confirm exact path in public/ */}
-            <img
+            <Image
               src="/profile.jpg"
               alt="Jolo Profile"
+              width={400}
+              height={400}
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jolo';
-              }}
             />
           </div>
           <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/10 rounded-full blur-xl" />
