@@ -39,11 +39,11 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="section-hero section-overlay relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-x-clip"
+      className="section-navy section-overlay relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-x-clip"
     >
       <div className="max-w-4xl w-full text-center z-10 px-2 sm:px-4">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 text-neutral-300 text-xs font-medium tracking-wider uppercase mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#7C3AED]/40 bg-[#7C3AED]/10 text-[#C084FC] text-xs font-medium tracking-wider uppercase mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#A855F7] animate-pulse" />
           Available for freelance work
         </div>
 
@@ -51,11 +51,11 @@ const Hero = () => {
           Hi, I am <span className="text-gradient-accent italic">Jolo</span>
         </h1>
 
-        <div className="text-xl md:text-2xl text-white/70 mb-10 h-16 md:h-8">
+        <div className="text-xl md:text-2xl text-white/80 mb-10 h-16 md:h-8">
           I like <span className="text-white font-medium">{text}</span>
-          <span className="w-1 h-6 bg-gradient-to-b from-white to-neutral-500 ml-1 inline-block animate-pulse" />
+          <span className="w-1 h-6 bg-gradient-to-b from-[#C084FC] to-[#7C3AED] ml-1 inline-block animate-pulse" />
           <br className="hidden md:block" />
-          <span className="text-sm md:text-base mt-2 block text-white/60">
+          <span className="text-sm md:text-base mt-2 block text-white/70">
             Beautiful digital experiences that make people go{' '}
             <em className="text-gradient-accent-subtle not-italic">&quot;wow&quot;</em>.
           </span>
@@ -79,13 +79,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 animate-bounce z-10">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 animate-bounce z-10">
         <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white via-neutral-400 to-transparent" />
+        <div className="w-[1px] h-12 bg-gradient-to-b from-[#C084FC] via-[#7C3AED] to-transparent" />
       </div>
     </section>
   );
 };
 
 export default Hero;
-

@@ -45,17 +45,17 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="section-projects section-overlay relative py-24 px-6 md:px-12"
+      className="section-navy section-overlay relative py-24 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="flex items-center gap-3 text-white/90 text-xs font-bold tracking-[0.2em] uppercase mb-4">
-            <div className="w-8 h-[1px] bg-gradient-to-r from-white to-white/50" />
+          <div className="flex items-center gap-3 section-label text-xs font-bold tracking-[0.2em] uppercase mb-4">
+            <div className="w-8 h-[1px] divider-gradient" />
             Featured Work
-            <div className="w-8 h-[1px] bg-gradient-to-l from-white to-white/50" />
+            <div className="w-8 h-[1px] divider-gradient scale-x-[-1]" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-            Projects I&apos;m <span className="text-gradient-dark italic">proud of</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Projects I&apos;m <span className="text-gradient-accent italic">proud of</span>
           </h2>
         </div>
 
@@ -63,9 +63,9 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden hover:border-white/25 transition-all duration-180 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
+              className="group relative bg-[#120820] border border-[#7C3AED]/35 rounded-2xl overflow-hidden card-glow transition-all duration-180 hover:-translate-y-1"
             >
-              <div className="h-48 flex items-center justify-center text-neutral-400 bg-white/5 group-hover:bg-white/10 transition-colors duration-500">
+              <div className="h-48 flex items-center justify-center text-[#C084FC]/70 bg-[#7C3AED]/10 group-hover:bg-[#7C3AED]/20 transition-colors duration-500">
                 <div className="group-hover:scale-110 transition-transform duration-500">
                   {project.icon}
                 </div>
@@ -76,30 +76,30 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 rounded bg-white/10 text-[10px] font-bold uppercase tracking-wider text-white/50"
+                      className="px-2 py-1 rounded bg-[#7C3AED]/15 border border-[#7C3AED]/25 text-[10px] font-bold uppercase tracking-wider text-white/70"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neutral-200 transition-colors duration-180">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#C084FC] transition-colors duration-180">
                   {project.title}
                 </h3>
-                <p className="text-sm text-white/60 leading-relaxed mb-6">
+                <p className="text-sm text-white/70 leading-relaxed mb-6">
                   {project.desc}
                 </p>
 
                 <div className="flex gap-4">
                   <a
                     href="#"
-                    className="flex items-center gap-2 text-xs font-bold text-neutral-300 uppercase tracking-widest hover:text-white transition-all duration-180 hover:scale-[1.01]"
+                    className="flex items-center gap-2 text-xs font-bold text-[#C084FC] uppercase tracking-widest hover:text-white transition-all duration-180 hover:scale-[1.01]"
                   >
                     <ExternalLink size={14} />
                     Live Demo
                   </a>
                   <a
                     href="#"
-                    className="flex items-center gap-2 text-xs font-bold text-white/40 uppercase tracking-widest hover:text-white transition-all duration-180 hover:scale-[1.01]"
+                    className="flex items-center gap-2 text-xs font-bold text-white/50 uppercase tracking-widest hover:text-white transition-all duration-180 hover:scale-[1.01]"
                   >
                     <Code size={14} />
                     Source

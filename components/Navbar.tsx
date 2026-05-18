@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4 md:px-12 ${
         scrolled
-          ? 'bg-black/85 backdrop-blur-md border-b border-white/10'
+          ? 'bg-[#080818]/90 backdrop-blur-lg border-b border-[#7C3AED]/30 shadow-[0_4px_24px_rgba(8,8,24,0.6)]'
           : 'bg-transparent'
       }`}
     >
@@ -36,13 +36,12 @@ const Navbar = () => {
           JL<span className="text-gradient-accent">.</span>
         </Link>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-white/70 hover:text-white transition-all duration-180 hover:scale-[1.01]"
+                className="text-sm font-medium text-white/80 hover:text-[#C084FC] transition-all duration-180 hover:scale-[1.01]"
               >
                 {link.name}
               </Link>
@@ -50,7 +49,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Hamburger */}
         <button
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
@@ -60,15 +58,14 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 border-b border-white/10 px-6 py-8 animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#080818]/95 backdrop-blur-lg border-b border-[#7C3AED]/30 px-6 py-8 animate-in fade-in slide-in-from-top-4 duration-300">
           <ul className="flex flex-col gap-6">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-lg font-medium text-white/70 hover:text-white transition-all duration-180 hover:scale-[1.01]"
+                  className="text-lg font-medium text-white/80 hover:text-[#C084FC] transition-all duration-180 hover:scale-[1.01]"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
