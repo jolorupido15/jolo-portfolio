@@ -114,7 +114,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="w-full flex items-center justify-center gap-2 btn-gradient-primary px-8 py-4 rounded-lg font-bold hover:scale-[1.01] active:scale-[0.98] transition-all duration-180 disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 btn-portfolio px-8 py-4 rounded-lg hover:scale-[1.01] active:scale-[0.98] transition-all duration-180 disabled:opacity-50"
             >
               {status === 'sending' ? 'Sending...' : (
                 <><Send size={18} /> Send Message ✦</>

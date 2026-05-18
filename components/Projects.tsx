@@ -76,7 +76,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 rounded bg-[#7C3AED]/15 border border-[#7C3AED]/25 text-[10px] font-bold uppercase tracking-wider text-white/70"
+                      className="btn-portfolio px-2 py-1 rounded text-[10px] uppercase tracking-wider"
                     >
                       {tag}
                     </span>
@@ -92,16 +92,16 @@ const Projects = () => {
                 <div className="flex gap-4">
                   <a
                     href="#"
-                    className="flex items-center gap-2 text-xs font-bold text-[#C084FC] uppercase tracking-widest hover:text-white transition-all duration-180 hover:scale-[1.01]"
+                    className="btn-portfolio inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs uppercase tracking-widest transition-all duration-180 hover:scale-[1.01]"
                   >
-                    <ExternalLink size={14} />
+                    <ExternalLink size={14} className="text-white" />
                     Live Demo
                   </a>
                   <a
                     href="#"
-                    className="flex items-center gap-2 text-xs font-bold text-white/50 uppercase tracking-widest hover:text-white transition-all duration-180 hover:scale-[1.01]"
+                    className="btn-portfolio inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs uppercase tracking-widest transition-all duration-180 hover:scale-[1.01]"
                   >
-                    <Code size={14} />
+                    <Code size={14} className="text-white" />
                     Source
                   </a>
                 </div>

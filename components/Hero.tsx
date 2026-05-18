@@ -64,14 +64,14 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="#projects"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 btn-gradient-primary px-8 py-4 rounded-lg font-bold hover:scale-[1.01] transition-all duration-180"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 btn-portfolio px-8 py-4 rounded-lg hover:scale-[1.01] transition-all duration-180"
           >
             <Rocket size={18} />
             View My Work
           </Link>
           <Link
             href="#contact"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 btn-gradient-outline px-8 py-4 rounded-lg font-bold hover:scale-[1.01] transition-all duration-180"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 btn-portfolio px-8 py-4 rounded-lg hover:scale-[1.01] transition-all duration-180"
           >
             <Send size={18} />
             Get In Touch
