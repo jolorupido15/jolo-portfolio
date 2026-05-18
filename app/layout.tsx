@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${dmMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#0a0a0a] text-[#e8e8e8] font-mono selection:bg-accent selection:text-[#0a0a0a]">
+      <body className="min-h-full flex flex-col bg-black text-[#f5f5f5] font-mono selection:bg-white/30 selection:text-black">
         <CustomCursor />
         {children}
       </body>

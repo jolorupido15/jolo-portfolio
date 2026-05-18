@@ -1,6 +1,6 @@
 'use client';
 
-import { Send, Mail, ExternalLink, Code, Globe } from 'lucide-react';
+import { Send, Mail, Code, Globe } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -33,118 +33,123 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 px-6 md:px-12 max-w-4xl mx-auto">
-      <div className="text-center mb-16">
-        <div className="flex items-center justify-center gap-3 text-accent text-xs font-bold tracking-[0.2em] uppercase mb-4">
-          <div className="w-8 h-[1px] bg-accent" />
-          Get In Touch
-          <div className="w-8 h-[1px] bg-accent" />
+    <section
+      id="contact"
+      className="section-contact section-overlay relative py-24 px-6 md:px-12"
+    >
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 text-neutral-300 text-xs font-bold tracking-[0.2em] uppercase mb-4">
+            <div className="w-8 h-[1px] divider-gradient" />
+            Get In Touch
+            <div className="w-8 h-[1px] divider-gradient" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Let&apos;s build something <br />
+            <span className="text-gradient-accent italic">amazing together</span>
+          </h2>
+          <p className="text-white/60 max-w-xl mx-auto leading-relaxed">
+            Whether you have a project in mind, a question, or just want to say hello — my inbox is always open.
+          </p>
         </div>
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-          Let's build something <br />
-          <span className="text-accent italic">amazing together</span>
-        </h2>
-        <p className="text-white/50 max-w-xl mx-auto leading-relaxed">
-          Whether you have a project in mind, a question, or just want to say hello — my inbox is always open.
-        </p>
-      </div>
 
-      <div className="bg-white/[0.02] border border-white/5 rounded-3xl p-8 md:p-12 backdrop-blur-sm">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-black/40 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-sm">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                  Full Name
+                </label>
+                <input
+                  id="name"
+                  name="from_name"
+                  type="text"
+                  required
+                  placeholder="John Doe"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/25 focus:outline-none border-gradient-focus transition-all duration-180"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                  Email Address
+                </label>
+                <input
+                  id="email"
+                  name="from_email"
+                  type="email"
+                  required
+                  placeholder="john@example.com"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/25 focus:outline-none border-gradient-focus transition-all duration-180"
+                />
+              </div>
+            </div>
+
             <div className="space-y-2">
-              <label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
-                Full Name
+              <label htmlFor="subject" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                Subject
               </label>
               <input
-                id="name"
-                name="from_name"
+                id="subject"
+                name="subject"
                 type="text"
-                required
-                placeholder="John Doe"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180"
+                placeholder="Project Inquiry"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/25 focus:outline-none border-gradient-focus transition-all duration-180"
               />
             </div>
+
             <div className="space-y-2">
-              <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
-                Email Address
+              <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                Message
               </label>
-              <input
-                id="email"
-                name="from_email"
-                type="email"
+              <textarea
+                id="message"
+                name="message"
                 required
-                placeholder="john@example.com"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180"
+                rows={5}
+                placeholder="Tell me about your project..."
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/25 focus:outline-none border-gradient-focus transition-all duration-180 resize-none"
               />
             </div>
-          </div>
 
-          <div className="space-y-2">
-            <label htmlFor="subject" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
-              Subject
-            </label>
-            <input
-              id="subject"
-              name="subject"
-              type="text"
-              placeholder="Project Inquiry"
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180"
-            />
-          </div>
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="w-full flex items-center justify-center gap-2 btn-gradient-primary px-8 py-4 rounded-lg font-bold hover:scale-[1.01] active:scale-[0.98] transition-all duration-180 disabled:opacity-50"
+            >
+              {status === 'sending' ? 'Sending...' : (
+                <><Send size={18} /> Send Message ✦</>
+              )}
+            </button>
 
-          <div className="space-y-2">
-            <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows={5}
-              placeholder="Tell me about your project..."
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-accent/50 transition-all duration-180 resize-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={status === 'sending'}
-            className="w-full flex items-center justify-center gap-2 bg-accent text-[#0a0a0a] px-8 py-4 rounded-lg font-bold hover:scale-[1.01] active:scale-[0.98] transition-all duration-180 disabled:opacity-50"
-          >
-            {status === 'sending' ? 'Sending...' : (
-              <><Send size={18} /> Send Message ✦</>
+            {status === 'success' && (
+              <div className="text-center text-neutral-300 text-sm font-medium">
+                Message sent! I&apos;ll get back to you soon.
+              </div>
             )}
-          </button>
+            {status === 'error' && (
+              <div className="text-center text-red-400 text-sm font-medium">
+                Something went wrong. Please try again.
+              </div>
+            )}
+          </form>
+        </div>
 
-          {status === 'success' && (
-            <div className="text-center text-accent text-sm font-medium">
-              🎉 Message sent! I'll get back to you soon.
-            </div>
-          )}
-          {status === 'error' && (
-            <div className="text-center text-red-400 text-sm font-medium">
-              ❌ Something went wrong. Please try again.
-            </div>
-          )}
-        </form>
+        <div className="flex justify-center gap-4 mt-16">
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              aria-label={social.label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/15 text-white/60 hover:text-white hover:border-white/35 transition-all duration-180 hover:scale-110"
+            >
+              {social.icon}
+            </a>
+          ))}
+        </div>
       </div>
-
-      <div className="flex justify-center gap-4 mt-16">
-        {socials.map((social) => (
-          <a
-            key={social.label}
-            href={social.href}
-            aria-label={social.label}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-accent hover:border-accent/30 transition-all duration-180 hover:scale-110"
-          >
-            {social.icon}
-          </a>
-        ))}
-      </div>
-    </section >
+    </section>
   );
 };
 

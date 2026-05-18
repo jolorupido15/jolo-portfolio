@@ -20,7 +20,7 @@ const CustomCursor = () => {
   return (
     <>
       <div
-        className="fixed top-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 blur-[80px] transition-transform duration-300 ease-out"
+        className="fixed top-0 left-0 w-[400px] h-[400px] bg-white/[0.04] rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 blur-[80px] transition-transform duration-300 ease-out"
         style={{
           left: position.x,
           top: position.y,
@@ -28,7 +28,7 @@ const CustomCursor = () => {
         }}
       />
       <div
-        className="fixed top-0 left-0 w-2 h-2 bg-accent rounded-full pointer-events-none z-[10000] -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out"
+        className="fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none z-[10000] -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out shadow-[0_0_12px_rgba(255,255,255,0.5)]"
         style={{
           left: position.x,
           top: position.y,

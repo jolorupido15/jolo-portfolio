@@ -26,12 +26,14 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4 md:px-12 ${
-        scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        scrolled
+          ? 'bg-black/85 backdrop-blur-md border-b border-white/10'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
-          JL<span className="text-accent">.</span>
+          JL<span className="text-gradient-accent">.</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -40,7 +42,7 @@ const Navbar = () => {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-white/70 hover:text-accent transition-all duration-180 hover:scale-[1.01]"
+                className="text-sm font-medium text-white/70 hover:text-white transition-all duration-180 hover:scale-[1.01]"
               >
                 {link.name}
               </Link>
@@ -60,13 +62,13 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#0a0a0a] border-b border-white/10 px-6 py-8 animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 border-b border-white/10 px-6 py-8 animate-in fade-in slide-in-from-top-4 duration-300">
           <ul className="flex flex-col gap-6">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-lg font-medium text-white/70 hover:text-accent transition-all duration-180 hover:scale-[1.01]"
+                  className="text-lg font-medium text-white/70 hover:text-white transition-all duration-180 hover:scale-[1.01]"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
