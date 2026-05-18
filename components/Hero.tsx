@@ -39,16 +39,16 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="section-hero section-overlay relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden"
+      className="section-hero section-overlay relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-x-clip"
     >
-      <div className="max-w-4xl w-full text-center z-10">
+      <div className="max-w-4xl w-full text-center z-10 px-2 sm:px-4">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 text-neutral-300 text-xs font-medium tracking-wider uppercase mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
           Available for freelance work
         </div>
 
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white mb-6">
-          Hi, I am <span className="text-gradient-accent italic"> Jolo </span>
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-[1.15] overflow-visible">
+          Hi, I am <span className="text-gradient-accent italic">Jolo</span>
         </h1>
 
         <div className="text-xl md:text-2xl text-white/70 mb-10 h-16 md:h-8">

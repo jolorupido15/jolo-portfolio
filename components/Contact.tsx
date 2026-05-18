@@ -44,7 +44,7 @@ const Contact = () => {
             Get In Touch
             <div className="w-8 h-[1px] divider-gradient" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-[1.2] overflow-visible pb-1">
             Let&apos;s build something <br />
             <span className="text-gradient-accent italic">amazing together</span>
           </h2>

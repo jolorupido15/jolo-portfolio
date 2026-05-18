@@ -49,10 +49,10 @@ const Projects = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="flex items-center gap-3 text-neutral-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">
-            <div className="w-8 h-[1px] bg-gradient-to-r from-neutral-900 to-neutral-500" />
+          <div className="flex items-center gap-3 text-white/90 text-xs font-bold tracking-[0.2em] uppercase mb-4">
+            <div className="w-8 h-[1px] bg-gradient-to-r from-white to-white/50" />
             Featured Work
-            <div className="w-8 h-[1px] bg-gradient-to-l from-neutral-900 to-neutral-500" />
+            <div className="w-8 h-[1px] bg-gradient-to-l from-white to-white/50" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
             Projects I&apos;m <span className="text-gradient-dark italic">proud of</span>
