@@ -1,14 +1,14 @@
 'use client';
 
-import { ExternalLink, Code, ShoppingBag, MessageSquare, BarChart3, Music, Leaf, Globe } from 'lucide-react';
+import { ExternalLink, Code, Search, MessageSquare, BarChart3, Music, Leaf, Globe } from 'lucide-react'
 
 const projects = [
   {
-    title: 'NexShop — E-Commerce Platform',
-    desc: 'A full-stack e-commerce solution with real-time inventory, Stripe payments, and a slick admin dashboard.',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    icon: <ShoppingBag size={48} className="text-white" />,
-  },
+  title: 'GitHub Finder',
+  desc: 'A GitHub profile search app with real-time data, repo stats, and language breakdown.',
+  tags: ['React', 'TypeScript', 'Vite', 'TanStack Query'],
+  icon: <Search size={48} className="text-white" />,
+},
   {
     title: 'AuraAI — Chat Assistant',
     desc: 'An intelligent AI chat assistant with context memory, document parsing, and multi-model support.',
