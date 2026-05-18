@@ -22,7 +22,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="relative group">
           <div className="absolute -inset-4 glow-accent rounded-[2rem] blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="relative aspect-square rounded-2xl overflow-hidden border border-[#7C3AED]/40 bg-[#080818] transition-all duration-180 hover:border-[#7C3AED] hover:shadow-[0_0_32px_rgba(124,58,237,0.3)]">
+          <div className="relative aspect-square rounded-2xl overflow-hidden border border-[#7C3AED]/40 bg-black transition-all duration-180 hover:border-[#7C3AED] hover:shadow-[0_0_32px_rgba(124,58,237,0.3)]">
             <Image
               src="/profile.jpg"
               alt="Jolo Profile"
