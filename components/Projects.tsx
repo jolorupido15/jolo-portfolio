@@ -8,6 +8,8 @@ const projects = [
   desc: 'A GitHub profile search app with real-time data, repo stats, and language breakdown.',
   tags: ['React', 'TypeScript', 'Vite', 'TanStack Query'],
   icon: <Search size={48} className="text-white" />,
+  live: 'https://github-finder-sable-two.vercel.app',
+  source: 'https://github.com/jolorupido15/github-finder',
 },
   {
     title: 'AuraAI — Chat Assistant',
@@ -91,14 +93,14 @@ const Projects = () => {
 
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href={project.live}
                     className="btn-portfolio inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs uppercase tracking-widest transition-all duration-180 hover:scale-[1.01]"
                   >
                     <ExternalLink size={14} className="text-white" />
                     Live Demo
                   </a>
                   <a
-                    href="#"
+                    href={project.source}
                     className="btn-portfolio inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs uppercase tracking-widest transition-all duration-180 hover:scale-[1.01]"
                   >
                     <Code size={14} className="text-white" />
