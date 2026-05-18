@@ -7,37 +7,37 @@ const projects = [
     title: 'NexShop — E-Commerce Platform',
     desc: 'A full-stack e-commerce solution with real-time inventory, Stripe payments, and a slick admin dashboard.',
     tags: ['React', 'Node.js', 'MongoDB'],
-    icon: <ShoppingBag size={48} />,
+    icon: <ShoppingBag size={48} className="text-white" />,
   },
   {
     title: 'AuraAI — Chat Assistant',
     desc: 'An intelligent AI chat assistant with context memory, document parsing, and multi-model support.',
     tags: ['Python', 'FastAPI', 'OpenAI'],
-    icon: <MessageSquare size={48} />,
+    icon: <MessageSquare size={48} className="text-white" />,
   },
   {
     title: 'FlowBoard — SaaS Dashboard',
     desc: 'A powerful analytics dashboard for startups. Real-time charts, team collaboration, and automated reports.',
     tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
-    icon: <BarChart3 size={48} />,
+    icon: <BarChart3 size={48} className="text-white" />,
   },
   {
     title: 'Wavify — Music Streaming App',
     desc: 'A cross-platform music streaming app with offline mode, social playlists, and AI-powered recommendations.',
     tags: ['React Native', 'Expo', 'Firebase'],
-    icon: <Music size={48} />,
+    icon: <Music size={48} className="text-white" />,
   },
   {
     title: 'GreenTrack — Eco Footprint Tracker',
     desc: 'A sustainability platform that gamifies eco-friendly habits. Users track their carbon footprint.',
     tags: ['Vue.js', 'Laravel', 'MySQL'],
-    icon: <Leaf size={48} />,
+    icon: <Leaf size={48} className="text-white" />,
   },
   {
     title: 'Roamly — Smart Travel Planner',
     desc: 'An AI-powered travel planner that generates personalized itineraries and visualizes your journey.',
     tags: ['React', 'GraphQL', 'Mapbox'],
-    icon: <Globe size={48} />,
+    icon: <Globe size={48} className="text-white" />,
   },
 ];
 
@@ -65,7 +65,7 @@ const Projects = () => {
               key={project.title}
               className="group relative bg-[#120820] border border-[#7C3AED]/35 rounded-2xl overflow-hidden card-glow transition-all duration-180 hover:-translate-y-1"
             >
-              <div className="h-48 flex items-center justify-center text-[#C084FC]/70 bg-[#7C3AED]/10 group-hover:bg-[#7C3AED]/20 transition-colors duration-500">
+              <div className="h-48 flex items-center justify-center text-white bg-[#2A1848] group-hover:bg-[#3B2463] transition-colors duration-500">
                 <div className="group-hover:scale-110 transition-transform duration-500">
                   {project.icon}
                 </div>
