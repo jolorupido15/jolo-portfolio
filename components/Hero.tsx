@@ -39,7 +39,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="section-navy section-overlay relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-x-clip"
+      className="section-navy relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-x-clip"
     >
       <div className="max-w-4xl w-full text-center z-10 px-2 sm:px-4">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#7C3AED]/40 bg-[#7C3AED]/10 text-[#C084FC] text-xs font-medium tracking-wider uppercase mb-8">

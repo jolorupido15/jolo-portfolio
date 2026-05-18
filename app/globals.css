@@ -21,14 +21,14 @@
   --transition-base: 180ms ease;
   --transition-slow: 320ms ease;
 
-  --color-navy: #080818;
-  --color-surface-alt: #120820;
-  --color-purple-deep: #1a0a2e;
+  --color-navy: #000000;
+  --color-surface-alt: #000000;
+  --color-purple-deep: #000000;
   --color-purple: #7c3aed;
   --color-purple-mid: #a855f7;
   --color-purple-light: #c084fc;
 
-  --gradient-page: linear-gradient(180deg, #080818 0%, #120820 45%, #1a0a2e 100%);
+  --gradient-page: #000000;
   --gradient-accent: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #ffffff 100%);
   --gradient-accent-subtle: linear-gradient(135deg, #c084fc 0%, #e9d5ff 100%);
   --gradient-btn: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
@@ -41,14 +41,14 @@
   --font-display: var(--font-syne);
   --font-mono: var(--font-dm-mono);
 
-  --color-navy: #080818;
-  --color-surface-alt: #120820;
-  --color-purple-deep: #1a0a2e;
+  --color-navy: #000000;
+  --color-surface-alt: #000000;
+  --color-purple-deep: #000000;
   --color-purple: #7c3aed;
   --color-purple-mid: #a855f7;
   --color-purple-light: #c084fc;
   --color-accent: #c084fc;
-  --color-background: #080818;
+  --color-background: #000000;
   --color-foreground: #ffffff;
 
   --color-border: rgba(124, 58, 237, 0.35);
@@ -131,28 +131,9 @@
     color: #ffffff;
   }
 
-  .section-overlay::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.5;
-  }
-
-  .section-navy {
-    background-color: #080818;
-  }
-
-  .section-navy::after {
-    background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(124, 58, 237, 0.12) 0%, transparent 65%);
-  }
-
+  .section-navy,
   .section-alt {
-    background-color: #120820;
-  }
-
-  .section-alt::after {
-    background: radial-gradient(ellipse 60% 45% at 80% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 60%);
+    background-color: #000000;
   }
 
   .glow-accent {
@@ -178,7 +159,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #080818;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #7c3aed 0%, #a855f7 100%);

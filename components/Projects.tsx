@@ -45,7 +45,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="section-navy section-overlay relative py-24 px-6 md:px-12"
+      className="section-navy relative py-24 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
@@ -63,7 +63,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative bg-[#120820] border border-[#7C3AED]/35 rounded-2xl overflow-hidden card-glow transition-all duration-180 hover:-translate-y-1"
+              className="group relative bg-black border border-[#7C3AED]/35 rounded-2xl overflow-hidden card-glow transition-all duration-180 hover:-translate-y-1"
             >
               <div className="h-48 flex items-center justify-center text-white bg-[#2A1848] group-hover:bg-[#3B2463] transition-colors duration-500">
                 <div className="group-hover:scale-110 transition-transform duration-500">

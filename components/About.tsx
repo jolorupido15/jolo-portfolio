@@ -17,7 +17,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="section-alt section-overlay relative py-24 px-6 md:px-12"
+      className="section-alt relative py-24 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="relative group">

@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="section-alt section-overlay relative py-24 px-6 md:px-12"
+      className="section-alt relative py-24 px-6 md:px-12"
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
@@ -53,7 +53,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="bg-[#080818]/70 border border-[#7C3AED]/35 rounded-3xl p-8 md:p-12 backdrop-blur-sm card-glow">
+        <div className="bg-black border border-[#7C3AED]/35 rounded-3xl p-8 md:p-12 backdrop-blur-sm card-glow">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
