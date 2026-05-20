@@ -1,6 +1,6 @@
 'use client';
 
-import { ExternalLink, Code, Search, MessageSquare, BarChart3, Music, Leaf, Globe } from 'lucide-react'
+import { ExternalLink, Code, Search, Activity, BarChart3, Music, Leaf, Globe } from 'lucide-react'
 
 const projects = [
   {
@@ -12,10 +12,12 @@ const projects = [
   source: 'https://github.com/jolorupido15/github-finder',
 },
   {
-    title: 'AuraAI — Chat Assistant',
-    desc: 'An intelligent AI chat assistant with context memory, document parsing, and multi-model support.',
-    tags: ['Python', 'FastAPI', 'OpenAI'],
-    icon: <MessageSquare size={48} className="text-white" />,
+    title: 'BMI Calculator',
+    desc: 'A clean and responsive BMI calculator with metric and imperial support, visual gauge, and instant health category feedback.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    icon: <Activity size={48} className="text-white" />,
+    live: 'https://bmi-calculator-[your-vercel-url].vercel.app',
+    source: 'https://github.com/jolorupido15/bmi-calculator',
   },
   {
     title: 'FlowBoard — SaaS Dashboard',
