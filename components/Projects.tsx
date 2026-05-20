@@ -11,12 +11,12 @@ const projects = [
   live: 'https://github-finder-sable-two.vercel.app',
   source: 'https://github.com/jolorupido15/github-finder',
 },
-  {
+ {
     title: 'BMI Calculator',
     desc: 'A clean and responsive BMI calculator with metric and imperial support, visual gauge, and instant health category feedback.',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     icon: <Activity size={48} className="text-white" />,
-    live: 'https://bmi-calculator-[your-vercel-url].vercel.app',
+    live: 'https://bmi-calculator-s583.vercel.app',
     source: 'https://github.com/jolorupido15/bmi-calculator',
   },
   {
