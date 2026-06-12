@@ -9,9 +9,9 @@ const About = () => {
   ];
 
   const stats = [
-    { num: '6+', label: 'Projects Built' },
-    { num: '100+', label: 'Hours of Coding' },
-    { num: '5+', label: 'Technologies Learned' },
+    { num: '6+', label: 'Projects Shipped' },
+    { num: '2+', label: 'Years Learning' },
+    { num: '10+', label: 'Technologies Used' },
   ];
 
   return (
